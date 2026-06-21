@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.10) # Указываем минимальную версию CMake
+
+# Задаём имя проекта
+project(test1)
+
+# Устанавливаем стандарт языка C++
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
+
+# Добавляем исполняемый файл из вашего исходного кода
+add_executable(${PROJECT_NAME}
+        main.cpp
+)
