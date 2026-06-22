@@ -1,6 +1,5 @@
 build/
-data/
-
+bin/
 *.exe
 *.ilk
 *.pdb
