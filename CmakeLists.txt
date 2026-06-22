@@ -12,4 +12,12 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
 # Добавляем исполняемый файл из вашего исходного кода
 add_executable(${PROJECT_NAME}
         main.cpp
+        file_utils.cpp
+        file_utils.h
 )
+
+if (MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE /utf-8)
+else()
+    target_compile_options(${PROJECT_NAME} PRIVATE -finput-charset=UTF-8 -fexec-charset=UTF-8)
+endif()
